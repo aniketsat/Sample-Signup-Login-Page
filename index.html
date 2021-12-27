@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body style="background-color: rgb(189, 235, 235);">
+
+    <div class="submit-success">
+
+    </div>
+
+
+    <div class="form-container">
+        <form action="" class="login">
+            <div class="form-content" id="login" hidden>
+                <div class="form-title">
+                    <h1>Login</h1>
+                </div>
+
+                <div class="form-body">
+                    <div class="form-input">
+                        <div class="form-input__label">Email :</div>
+                        <input type="email" class="form-input__input" placeholder="Email Here" required />
+                    </div>
+                    <div class="form-input">
+                        <div class="form-input__label">Password :</div>
+                        <input type="password" class="form-input__input" id="pswd" placeholder="Password Here" required />
+                        <br>
+                        <span id="message" style="color:red"> </span>
+                    </div>
+                    <div class="btn">
+                        <button type="submit">Login</button>
+                    </div>
+                </div>
+
+                <div class="form-footer">
+                    <p>Don't have an account? <a href="#" id="signup-link">Create account</a></p>
+                </div>
+
+            </div>
+        </form>
+
+        <form action="" class="signup" onsubmit="return validateSignupForm()">
+            <div class="form-content" id="signup">
+                <div class="form-title">
+                    <h1>Sign Up</h1>
+                </div>
+
+                <div class="form-body">
+                    <div class="form-input">
+                        <div class="form-input__label">Email :</div>
+                        <input type="email" id="email" class="form-input__input" placeholder="Email Here" required />
+                    </div>
+                    <div class="form-input">
+                        <div class="form-input__label">Enter Password :</div>
+                        <input type="password" id="pswd1" class="form-input__input" placeholder="Password Here" required />
+                        <br>
+                        <span id="message1" style="color:red; font-size: 12px;"> </span>
+                    </div>
+                    <div class="form-input" style="margin-bottom: 64px;">
+                        <div class="form-input__label">Confirm Password :</div>
+                        <input type="password" id="pswd2" class="form-input__input" placeholder="Password Here" required />
+                        <br>
+                        <span id="message2" style="color:red; font-size: 12px;"> </span>
+                    </div>
+                    <div class="btn">
+                        <button type="submit">Sign Up</button>
+                    </div>
+                </div>
+
+                <div class="form-footer">
+                    <p>Already have an account? <a href="#" id="login-link">Login</a></p>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
